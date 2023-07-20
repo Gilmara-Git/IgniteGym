@@ -7,7 +7,7 @@ Figma Layout:
 
 <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/4bfb2694-0414-470e-a746-211732e7f559" alt="layout">
 
-<img src="" alt="igniteGym"/>
+<img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/62ade46d-d06a-4e19-ba8b-e6d105b40364" alt="igniteGym"/>
 
 </div>
 
