@@ -5,7 +5,7 @@
 Figma Layout:
 [Millena Kupsinskü Martins](https://www.linkedin.com/in/millenakmartins/)
 
-<img src="" alt="layout">
+<img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/4bfb2694-0414-470e-a746-211732e7f559" alt="layout">
 
 <img src="" alt="igniteGym"/>
 
