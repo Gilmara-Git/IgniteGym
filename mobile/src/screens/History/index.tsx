@@ -7,6 +7,7 @@ import  { api } from '@services/api';
 import { useFocusEffect } from '@react-navigation/native';
 import { HistoryDTO } from '@dtos/HistoryDTO';
 import { Loading } from '@components/Loading';
+import { tagExercisesHistoryCount } from '../../notifications/notificationsTag';
 
 export type HistorySectionType = {
     title: string;
@@ -17,7 +18,10 @@ export const History =()=>{
     const toast  = useToast();
     const [ isLoading, setIsLoading ] = useState(true);
     const [ exercises, setExercises ] = useState<HistorySectionType[]>([]);
-   
+
+    console.log(exercises[0].data[0].created_at)
+
+    tagExercisesHistoryCount(exercises.length.toString());
 
      const fetchExercisesHistory = async () =>{
         try{
