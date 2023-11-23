@@ -9,11 +9,11 @@ Figma Layout:
 
 <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/62ade46d-d06a-4e19-ba8b-e6d105b40364" alt="igniteGym"/>
 
-<div align="center" display="flex" flex-direction="row">
+<p align="center">
     <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/38a7a8fa-66fe-443d-ad3d-bdd71774b898" alt="Notification when user is logged out"/>
 
-   <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/38a7a8fa-66fe-443d-ad3d-bdd71774b898" alt="Notification when user is logged out"/>
-</div>
+   <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/8005c1e4-d06d-46e7-ab32-a7349d4e1a4b" alt="Notification of exercises history"/>
+</p>
 
 </div>
 

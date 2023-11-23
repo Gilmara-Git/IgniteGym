@@ -19,7 +19,7 @@ export const History =()=>{
     const [ isLoading, setIsLoading ] = useState(true);
     const [ exercises, setExercises ] = useState<HistorySectionType[]>([]);
 
-    console.log(exercises[0].data[0].created_at)
+    // console.log(exercises[0].data[0].created_at)
 
     tagExercisesHistoryCount(exercises.length.toString());
 
