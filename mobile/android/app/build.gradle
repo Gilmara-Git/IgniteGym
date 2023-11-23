@@ -113,7 +113,7 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.ignitegym"
+    namespace 'com.ignitegym'
     defaultConfig {
         applicationId 'com.ignitegym'
         minSdkVersion rootProject.ext.minSdkVersion
