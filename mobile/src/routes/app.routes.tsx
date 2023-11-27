@@ -7,6 +7,7 @@ import { History } from '@screens/History';
 import HomeSvg from '@assets/home.svg';
 import HistorySvg from '@assets/history.svg';
 import ProfileSvg from '@assets/profile.svg';
+import { NotFound } from '@screens/NotFound'
 import { useTheme } from 'native-base';
 
 type AppRoutesTypes = {
@@ -14,6 +15,7 @@ type AppRoutesTypes = {
     history: undefined;
     profile: undefined;
     exercise: { exerciseId: string};
+    notFound: undefined;
 }
 
 export type AppRoutesNavigationProps = BottomTabNavigationProp<AppRoutesTypes>
@@ -84,6 +86,12 @@ export const AppRoutes =()=>{
                 name="exercise" 
                 component={Exercise}
                 options={{ tabBarButton: () => null}}
+            />
+
+            <Screen 
+                name='notFound'
+                component={NotFound}
+                options={{tabBarButton: ()=>null}}
             />
         </Navigator>
     )
