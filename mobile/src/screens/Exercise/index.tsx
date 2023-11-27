@@ -26,11 +26,12 @@ export const Exercise =()=>{
     const [isLoading, setIsLoading ]  = useState(true);
     const [ exercise, setExercise ] = useState<ExcerciseDTO>({}as ExcerciseDTO);
     const toast = useToast();
-  
+
     
     const navigation = useNavigation<AppRoutesNavigationProps>();
     const { params }  = useRoute();
     const { exerciseId }  = params as ExerciseRouteParams;
+  
    
     const handleExerciseRegistration = async ()=>{
         try{

@@ -7,7 +7,7 @@ import  { api } from '@services/api';
 import { useFocusEffect } from '@react-navigation/native';
 import { HistoryDTO } from '@dtos/HistoryDTO';
 import { Loading } from '@components/Loading';
-import { tagExercisesHistoryCount } from '../../notifications/notificationsTag';
+import { tagExercisesHistoryCount , tagGapInExercises} from '../../notifications/notificationsTag';
 
 export type HistorySectionType = {
     title: string;
@@ -18,10 +18,34 @@ export const History =()=>{
     const toast  = useToast();
     const [ isLoading, setIsLoading ] = useState(true);
     const [ exercises, setExercises ] = useState<HistorySectionType[]>([]);
+    
+    if(exercises.length > 0){
+        tagExercisesHistoryCount(exercises.length.toString(), exercises[0].data.length.toString());
+        
+        const today =  new Date();
+        const prevExerciseDate = exercises[0].data[0].created_at;
+        const prevDate = prevExerciseDate.substring(0, 10);
+        const lastDateWorkout = new Date(prevDate);
+   
+    
+        let absent = 0;
 
-    // console.log(exercises[0].data[0].created_at)
+       if(today > lastDateWorkout){
+      
+        if(today.getFullYear() === lastDateWorkout.getFullYear() && 
+            today.getMonth() === lastDateWorkout.getMonth() &&
+            today.getDate() !== lastDateWorkout.getUTCDate()
+            ){
+              
+                absent = today.getDate() - lastDateWorkout.getUTCDate();
+                tagGapInExercises(absent.toString());
 
-    tagExercisesHistoryCount(exercises.length.toString());
+            }
+
+        }
+      
+    }
+
 
      const fetchExercisesHistory = async () =>{
         try{

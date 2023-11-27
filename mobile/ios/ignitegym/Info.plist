@@ -25,7 +25,14 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
+          <string>ignitegym</string>
           <string>com.ignitegym</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>exp+ignitegym</string>
         </array>
       </dict>
     </array>
