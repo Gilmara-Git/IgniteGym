@@ -27,11 +27,11 @@ export const Routes = () => {
   const theme = DefaultTheme;
   theme.colors.background = colors.gray[700];
 
-  const exerciseDeepLinking = Linking.createURL('exercise', 
-  { queryParams: 
-    { exerciseId: '10'}
-  });
-  console.log('SIGNIN_DEEP_LINKING',exerciseDeepLinking)
+  // const exerciseDeepLinking = Linking.createURL('exercise', 
+  // { queryParams: 
+  //   { exerciseId: '10'}
+  // });
+  // console.log('SIGNIN_DEEP_LINKING',exerciseDeepLinking)
 
   if(isLoadingStorageUser){
     return <Loading />

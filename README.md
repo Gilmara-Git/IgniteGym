@@ -19,8 +19,14 @@ Figma Layout:
     <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/38a7a8fa-66fe-443d-ad3d-bdd71774b898" alt="Notification when user is logged out"/>
 <h5>Notification showing exercises history count</h5>
  <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/8216719f-3263-4190-802a-bec09945a7f4" alt="Notification of exercises history"/>
-<p>
-</p>
+ <h5>Messaging sent through Channel plus Deep Linking</h5>
+ <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/ad1097c9-c4d4-4500-8b8f-d82424051939" alt="Message sent through Channel"/>
+
+ <h5>Number of days since last exercise</h5>
+ <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/91ce5fd3-9e00-4f23-aa41-c4c07a79e680" alt="Number of days since last exercise"/>
+
+<h5>Workout count on last session</h5>
+<img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/7368c616-b997-4115-af57-e3461a502807" alt="Exercise count on last session" />
 
 </div>
 
