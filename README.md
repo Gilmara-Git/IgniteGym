@@ -27,6 +27,15 @@ Figma Layout:
 
 <h5>Workout count on last session</h5>
 <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/7368c616-b997-4115-af57-e3461a502807" alt="Exercise count on last session" />
+<h5>Deep Linking when page is not found</h5>
+<img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/4871b4d0-5805-45fd-99eb-804c7b074f1c" alt="Deep linking When page is not found"/>
+
+<h5>Direct user to SignIn with Deep Linking</h5>
+<img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/8f2265a6-25a9-4ecc-ae1e-dfd60b4abe88" alt="Direct user to signIn with Deep linking"/>
+
+<h5>Direct user a specific exercise using Deep Linking with params</h5>
+<img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/9c69de79-4bd7-48ca-a561-48a3eaddb9ab" alt="Direct user to signIn with Deep linking"/>
+
 
 </div>
 
