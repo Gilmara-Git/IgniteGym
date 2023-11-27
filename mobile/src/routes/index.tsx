@@ -6,6 +6,18 @@ import { useTheme, Box } from "native-base"
 import { useAuth } from '@hooks/useAuth';
 import { Loading } from "@components/Loading";
 import { tagUserLoggedOut , tagUserInfo} from "../notifications/notificationsTag";
+import * as Linking from 'expo-linking';
+
+const linking = {
+  prefixes: ['ignitegym://', 'com.ignitegym://', 'exp+ignitegym://'],
+  config: {
+    screens: {
+     signIn: 'signIn',
+     exercise: 'exercise/:exerciseId',
+     notFound: '*'
+    }
+}
+};
 
 
 export const Routes = () => {
@@ -14,6 +26,12 @@ export const Routes = () => {
 
   const theme = DefaultTheme;
   theme.colors.background = colors.gray[700];
+
+  const exerciseDeepLinking = Linking.createURL('exercise', 
+  { queryParams: 
+    { exerciseId: '10'}
+  });
+  console.log('SIGNIN_DEEP_LINKING',exerciseDeepLinking)
 
   if(isLoadingStorageUser){
     return <Loading />
@@ -29,7 +47,7 @@ export const Routes = () => {
 
   return (
     <Box bg="gray.700" flex={1}>
-      <NavigationContainer theme={theme}>
+      <NavigationContainer theme={theme} linking={linking}>
           { user.id ? <AppRoutes /> : <AuthRoutes />}       
       </NavigationContainer>
     </Box>
