@@ -9,14 +9,20 @@ Figma Layout:
 
 <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/62ade46d-d06a-4e19-ba8b-e6d105b40364" alt="igniteGym"/>
 
-<p align="center">
-    <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/38a7a8fa-66fe-443d-ad3d-bdd71774b898" alt="Notification when user is logged out"/>
+  
+</div>
+<div>
+<h2 align="center">OneSignal Notifications</h1>
 
-   <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/8216719f-3263-4190-802a-bec09945a7f4" alt="Notification of exercises history"/>
+<div align="center">
+<h5>Notification when user is logged Out</h5>
+    <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/38a7a8fa-66fe-443d-ad3d-bdd71774b898" alt="Notification when user is logged out"/>
+<h5>Notification showing exercises history count</h5>
+ <img src="https://github.com/Gilmara-Git/IgniteGym/assets/66445234/8216719f-3263-4190-802a-bec09945a7f4" alt="Notification of exercises history"/>
+<p>
 </p>
 
 </div>
-
 
 
 # Menu
@@ -34,16 +40,38 @@ Figma Layout:
 - On the **History** page it displays the exercises per day in a **Section List**.  
 - On the **Profile** page you can set a **profile picture** by uploading it from your device.
 - You can only access the exercises if you are **authenticated** (App routes/private), otherwise you are displayed with the **SignIn** or **SignUp** pages (Auth routes /public).
+- Furthermore, **Notifications**, **Deep Linking** and **Expo Dev Client** were added to this project as explained below.
 
+## OneSignal
+ **OneSignal** delivers **notifications messages** to both **ios** and **android**.
+ - In order to setup the **android** environment to use **notifications messages** I used a free could service from Google, **FCM v1(legacy)**, Firebase Cloud Messaging. (firebase.google.com) 
+ - In order to setup the **ios** environment for **notifications messages**, we would need to use an **Apple developer account** to utilize their cloud messaging service which is called **APNS-Apple Push Notification Service**, so on this project only android was used.
+
+## Deep Linking
+Deep linking was also used on this project, so a **scheme** was setup for the project, then I used the **npx uri-scheme list** command to verify the scheme creation and **npx uri-scheme open** to open the **url**.
+Also, in order to integrate the React Navigation with **Deep Linking** we configured the routes and their params to a **linking** object and passed it to the **NavigationContainer linking property**, so we when **Deep Linking with params** is passed through **OneSignal** the user is directed to specifics screens.
+In order to help generate the deep linking url, **expo-linking** lib was used.
+
+## Expo Dev Client
+**Expo Dev Client** is a new **Expo** feature that allows you to use all its integrated **libs** plus the **libs** that are not support by **Expo**, like third party libraries. In this project **OneSignal** is one example as it is a **native lib**, but we ran it with expo, thanks to **Expo Dev Client** . So basically we generate a **customized Expo Go development build** when running the project with **expo-dev-client**.
+
+
+*Prerequisites:* 
+1 - **ios** and **android** folders must have been generated. In other words, **expo prebuild** must had run.
+2 -Must had generated a **build** with a native code (**npx expo run: android**, **npx expo run:ios**)
+3 - Install **Expo Dev Client** and run **npx expo start --dev-client**. **Expo** will look for the **build with the native code** and run it with **Expo**.
 
 
  # Motivation
 
 
-- Practice ***React Navigation v6*** (***Stack Navigation and BottomTab Navigation*** were used)
-- Learn and practice styling with **Native Base** 
+- Practice ***React Navigation v6*** (***Stack Navigation and BottomTab Navigation*** were used).
+- Learn and practice styling with **Native Base** .
 - Practice **AsyncStorage** to store user, token and refresh_token.
-- Practice **Expo Image Picker**
+- Practice **Expo Image Picker**.
+- Learn and practice sending **notifications** with **OneSignal**. 
+- Learn to configure and use **Deep Linking** to send notifications through **OneSignal**.
+- Learn and practice on how to produce a customized build with **expo dev client**.
 - Interact with the Dev Community, learn together and progress as a Developer.
 - Keep committed with my goals.</br>
 
@@ -66,6 +94,11 @@ Figma Layout:
 - Features to change username and password
 - Password validation - React Hook Form 
 - Babel-plugin-module-resolver to map path/imports
+- OneSignal
+- FCM v1(legacy) - Firebase Cloud Messaging for Android 
+- Deep Linking
+- expo-linking
+- Expo dev client
 
 
 # App creation
